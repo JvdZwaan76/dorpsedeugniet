@@ -45,10 +45,11 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem; /* Increased padding for better touch targets */
     margin: 0.2rem;
     border-radius: 5px;
     display: inline-block;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -61,7 +62,7 @@ nav a:hover, nav a:focus {
 .breadcrumbs {
     padding: 0.5rem 1rem;
     background-color: #f9f9f9;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     text-align: center;
 }
 
@@ -119,7 +120,7 @@ nav a:hover, nav a:focus {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -195,7 +196,7 @@ nav a:hover, nav a:focus {
 }
 
 .grid-item h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: 0.5rem;
 }
 
@@ -209,6 +210,7 @@ nav a:hover, nav a:focus {
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: #5c3a29;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .social-icons {
@@ -246,7 +248,7 @@ nav a:hover, nav a:focus {
 }
 
 .newsletter h3 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
     margin-bottom: 1rem;
     color: #5c3a29;
 }
@@ -261,7 +263,7 @@ nav a:hover, nav a:focus {
     padding: 0.6rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     width: 250px;
 }
 
@@ -271,7 +273,7 @@ nav a:hover, nav a:focus {
     padding: 0.6rem 1.5rem;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -351,39 +353,90 @@ footer a:hover {
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 0.75rem;
+    }
+    .logo-img {
+        max-width: 130px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Navigation */
     nav {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     nav a {
-        width: 80%;
+        width: 90%;
         text-align: center;
         margin: 0.3rem 0;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* Hero */
     .hero {
-        padding: 100px 1rem;
+        padding: 80px 0.75rem;
     }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+    .hero button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Content section */
+    .content-section {
+        padding: 2rem 0.75rem;
+    }
+    .content-section h2, .content-section h3 {
+        font-size: 1.5rem;
+    }
+    .content-section p {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    /* Grid container */
     .grid-container {
         grid-template-columns: 1fr;
-    }
-    .contact-form {
+        gap: 1rem;
         padding: 0 0.5rem;
-        max-width: 100%;
     }
-    .contact-form input,
-    .contact-form textarea {
-        padding: 0.5rem;
+    .grid-item {
+        padding: 1rem;
     }
-    .contact-form button {
-        padding: 0.7rem 1rem;
+    .grid-item img {
+        margin-bottom: 0.75rem;
     }
-    .newsletter form {
-        flex-direction: column;
-        gap: 0.5rem;
+    .grid-item h3 {
+        font-size: 1.2rem;
     }
-    .newsletter input {
-        width: 100%;
+    .grid-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Social share */
+    .social-share {
+        margin: 1rem 0;
+    }
+    .social-share p {
+        font-size: 0.9rem;
     }
     .social-icons {
         gap: 1rem;
@@ -392,50 +445,113 @@ footer a:hover {
         width: 28px;
         height: 28px;
     }
-}
 
-@media (max-width: 480px) {
-    .logo-img {
-        max-width: 120px;
+    /* Newsletter */
+    .newsletter {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
     }
-    header h1 {
-        font-size: 1.5rem;
+    .newsletter h3 {
+        font-size: 1.4rem;
     }
-    .hero h2 {
-        font-size: 1.8rem;
+    .newsletter form {
+        flex-direction: column;
+        gap: 0.5rem;
     }
-    .hero p {
+    .newsletter input {
+        width: 100%;
+        padding: 0.5rem;
         font-size: 0.9rem;
     }
-    .content-section {
-        padding: 2rem 0.5rem;
-    }
-    .content-section h2, .content-section h3 {
-        font-size: 1.5rem;
-    }
-    .content-section p {
+    .newsletter button {
+        padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
-    .grid-item h3 {
-        font-size: 1.2rem;
-    }
-    .contact-form label {
-        font-size: 0.9rem;
+
+    /* Contact form */
+    .contact-form {
+        padding: 0 0.5rem;
+        max-width: 100%;
     }
     .contact-form input,
     .contact-form textarea {
+        padding: 0.5rem;
         font-size: 0.9rem;
-        padding: 0.4rem;
     }
     .contact-form textarea {
         min-height: 80px;
     }
     .contact-form button {
-        padding: 0.6rem 1rem;
+        padding: 0.7rem 1rem;
         font-size: 0.9rem;
     }
-    .newsletter h3 {
-        font-size: 1.5rem;
+
+    /* Footer */
+    footer {
+        padding: 0.75rem 0;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .logo-img {
+        max-width: 110px;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    /* Navigation */
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        font-size: 0.75rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 0.5rem;
+    }
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    .hero p {
+        font-size: 0.85rem;
+    }
+    .hero button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Content section */
+    .content-section {
+        padding: 1.5rem 0.5rem;
+    }
+    .content-section h2, .content-section h3 {
+        font-size: 1.3rem;
+    }
+    .content-section p {
+        font-size: 0.85rem;
+    }
+
+    /* Grid container */
+    .grid-item h3 {
+        font-size: 1.1rem;
+    }
+    .grid-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Social share */
+    .social-share p {
+        font-size: 0.85rem;
     }
     .social-icons {
         gap: 0.75rem;
@@ -444,10 +560,125 @@ footer a:hover {
         width: 24px;
         height: 24px;
     }
+
+    /* Newsletter */
+    .newsletter h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Contact form */
+    .contact-form label {
+        font-size: 0.85rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+    .contact-form button {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablet-specific adjustments (768px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 1rem;
+    }
+    .logo-img {
+        max-width: 140px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Navigation */
+    nav a {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 120px 1rem;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .hero button {
+        padding: 0.7rem 1.3rem;
+        font-size: 1rem;
+    }
+
+    /* Content section */
+    .content-section {
+        padding: 2.5rem 1rem;
+    }
+    .content-section h2, .content-section h3 {
+        font-size: 1.8rem;
+    }
+    .content-section p {
+        font-size: 1rem;
+    }
+
+    /* Grid container */
+    .grid-container {
+        gap: 1.2rem;
+    }
+    .grid-item h3 {
+        font-size: 1.3rem;
+    }
+    .grid-item p {
+        font-size: 0.95rem;
+    }
+
+    /* Social share */
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Newsletter */
+    .newsletter input {
+        width: 200px;
+    }
 }
 
 /* Desktop-specific adjustments for larger screens */
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
+    /* Header */
+    header {
+        padding: 1.5rem;
+    }
+    .logo-img {
+        max-width: 160px;
+    }
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Navigation */
+    nav a {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        font-size: 0.95rem;
+    }
+
+    /* Hero */
     .hero {
         padding: 300px 2rem;
     }
@@ -461,14 +692,82 @@ footer a:hover {
         padding: 1rem 2rem;
         font-size: 1.2rem;
     }
+
+    /* Content section */
+    .content-section {
+        padding: 4rem 2rem;
+    }
     .content-section h2 {
         font-size: 2.4rem;
     }
     .content-section p {
         font-size: 1.2rem;
     }
+
+    /* Grid container */
+    .grid-container {
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    .grid-item {
+        padding: 2rem;
+    }
+    .grid-item h3 {
+        font-size: 1.5rem;
+    }
+    .grid-item p {
+        font-size: 1rem;
+    }
+
+    /* Social share */
+    .social-share {
+        margin: 2rem 0;
+    }
+    .social-share p {
+        font-size: 1rem;
+    }
     .social-icon {
         width: 36px;
         height: 36px;
+    }
+
+    /* Newsletter */
+    .newsletter {
+        padding: 2.5rem;
+        margin: 2.5rem 0;
+    }
+    .newsletter h3 {
+        font-size: 1.8rem;
+    }
+    .newsletter input {
+        width: 300px;
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+    .newsletter button {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: 0 1.5rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+    .contact-form button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 0;
+    }
+    footer p {
+        font-size: 1rem;
     }
 }
