@@ -9,7 +9,6 @@
     <meta name="author" content="Dorpsedeugniet">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.dorpsedeugniet.com/">
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS for better caching -->
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -47,7 +46,7 @@
 
         header h1 {
             margin: 0;
-            font-size: clamp(1.8rem, 5vw, 2.8rem); /* Responsive font size */
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
             color: #5c3a29;
         }
 
@@ -162,7 +161,7 @@
             height: auto;
             margin-bottom: 1rem;
             border-radius: 5px;
-            loading: "lazy"; /* Lazy loading for performance */
+            loading: "lazy";
         }
 
         footer {
@@ -183,15 +182,24 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
-        .contact-form input, .contact-form textarea {
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
             padding: 0.6rem;
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 1rem;
             box-sizing: border-box;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-family: 'Georgia', serif;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
         }
 
         .contact-form button {
@@ -200,9 +208,15 @@
             padding: 0.8rem 1.5rem;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
             cursor: pointer;
             width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover,
+        .contact-form button:focus {
+            background-color: #d35400;
         }
 
         /* Mobile-specific adjustments */
@@ -223,6 +237,17 @@
             .grid-container {
                 grid-template-columns: 1fr;
             }
+            .contact-form {
+                padding: 0 0.5rem;
+                max-width: 100%;
+            }
+            .contact-form input,
+            .contact-form textarea {
+                padding: 0.5rem;
+            }
+            .contact-form button {
+                padding: 0.7rem 1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -233,6 +258,24 @@
                 font-size: 1.8rem;
             }
             .hero p {
+                font-size: 0.9rem;
+            }
+            .content-section {
+                padding: 2rem 0.5rem;
+            }
+            .contact-form label {
+                font-size: 0.9rem;
+            }
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.9rem;
+                padding: 0.4rem;
+            }
+            .contact-form textarea {
+                min-height: 80px;
+            }
+            .contact-form button {
+                padding: 0.6rem 1rem;
                 font-size: 0.9rem;
             }
         }
@@ -290,13 +333,13 @@
         <p>Questions? Comments? Reach out to us!</p>
         <form class="contact-form" action="mailto:jaspervdz@me.com" method="post" enctype="text/plain" aria-label="Contact form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required aria-required="true">
+            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your name">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required aria-required="true">
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Type your message here"></textarea>
 
             <button type="submit">Send Message</button>
         </form>
