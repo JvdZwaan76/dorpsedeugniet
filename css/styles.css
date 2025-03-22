@@ -33,7 +33,7 @@ body {
 /* Header styles */
 header {
     background-color: #d2b48c;
-    padding: 0.8rem; /* Tightened padding */
+    padding: 0.8rem;
     text-align: center;
 }
 
@@ -44,7 +44,7 @@ header {
 /* Logo container with solid white background */
 .logo-container {
     background: #ffffff; /* Solid white background */
-    padding: 0.3rem 0.8rem; /* Tightened padding */
+    padding: 0.3rem 0.8rem;
     display: inline-block;
 }
 
@@ -56,7 +56,7 @@ header {
 }
 
 header h1 {
-    margin: 0.3rem 0 0; /* Reduced margin */
+    margin: 0.3rem 0 0;
     font-size: clamp(1.6rem, 4vw, 2.8rem);
     color: #5c3a29;
 }
@@ -64,15 +64,15 @@ header h1 {
 /* Navigation styles */
 nav {
     background-color: #5c3a29;
-    padding: 0.3rem 0; /* Tightened padding */
+    padding: 0.3rem 0;
     text-align: center;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem; /* Tightened padding */
-    margin: 0.1rem; /* Reduced margin */
+    padding: 0.5rem 1rem;
+    margin: 0.1rem;
     border-radius: 5px;
     display: inline-block;
     font-size: clamp(0.85rem, 2vw, 1.1rem);
@@ -86,7 +86,7 @@ nav a:hover, nav a:focus {
 
 /* Breadcrumbs styles */
 .breadcrumbs {
-    padding: 0.3rem 0.8rem; /* Tightened padding */
+    padding: 0.3rem 0.8rem;
     background-color: #f9f9f9;
     font-size: clamp(0.75rem, 1.8vw, 0.9rem);
     text-align: center;
@@ -108,7 +108,7 @@ nav a:hover, nav a:focus {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: clamp(80px, 15vw, 200px) 0.8rem; /* Tightened padding */
+    padding: clamp(80px, 15vw, 200px) 0.8rem;
     position: relative;
 }
 
@@ -129,21 +129,21 @@ nav a:hover, nav a:focus {
 
 .hero h2 {
     font-size: clamp(1.8rem, 5vw, 3.5rem);
-    margin-bottom: 0.8rem; /* Reduced margin */
+    margin-bottom: 0.8rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
     font-size: clamp(0.9rem, 2.5vw, 1.3rem);
-    max-width: 700px; /* Slightly reduced max-width */
-    margin: 0 auto 1rem; /* Reduced margin */
+    max-width: 700px;
+    margin: 0 auto 1rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .hero button {
     background-color: #e67e22;
     color: #fff;
-    padding: 0.7rem 1.2rem; /* Tightened padding */
+    padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 5px;
     font-size: clamp(0.85rem, 2vw, 1rem);
@@ -162,23 +162,23 @@ nav a:hover, nav a:focus {
 
 /* Content section styles */
 .content-section {
-    padding: 2rem 0.8rem; /* Tightened padding */
+    padding: 2rem 0.8rem;
     text-align: center;
-    max-width: 1100px; /* Slightly reduced max-width */
+    max-width: 1100px;
     margin: 0 auto;
     background-color: #fff;
 }
 
 .content-section h2, .content-section h3 {
     font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-    margin-bottom: 0.8rem; /* Reduced margin */
+    margin-bottom: 0.8rem;
     color: #5c3a29;
 }
 
 .content-section p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
-    max-width: 700px; /* Slightly reduced max-width */
-    margin: 0 auto 1rem; /* Reduced margin */
+    max-width: 700px;
+    margin: 0 auto 1rem;
 }
 
 .content-section a {
@@ -192,38 +192,55 @@ nav a:hover, nav a:focus {
     text-decoration: underline;
 }
 
+/* Policy list (ul/li) styles */
+.policy-list {
+    list-style-type: disc; /* Ensure default bullet style */
+    padding-left: 1.5rem; /* Reduced padding for tighter layout */
+    margin: 0.5rem 0; /* Reduced margin */
+    text-align: left; /* Align bullets to the left */
+    max-width: 700px; /* Match paragraph max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.policy-list li {
+    margin-bottom: 0.3rem; /* Reduced spacing between list items */
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.5; /* Slightly reduced line height */
+}
+
 /* Grid container styles */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Tightened min width */
-    gap: 1rem; /* Reduced gap */
-    padding: 0 0.8rem; /* Tightened padding */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 0 0.8rem;
 }
 
 .grid-item {
     background-color: #f9f9f9;
-    padding: 1.2rem; /* Tightened padding */
+    padding: 1.2rem;
     border-radius: 8px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-item:hover {
-    transform: scale(1.03) translateY(-3px); /* Subtle scale and lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    transform: scale(1.03) translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .grid-item img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 0.8rem; /* Reduced margin */
+    margin-bottom: 0.8rem;
     border-radius: 5px;
     loading: "lazy";
 }
 
 .grid-item h3 {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    margin-bottom: 0.4rem; /* Reduced margin */
+    margin-bottom: 0.4rem;
 }
 
 .grid-item p {
@@ -232,12 +249,12 @@ nav a:hover, nav a:focus {
 
 /* Social share styles */
 .social-share {
-    margin: 1rem 0; /* Reduced margin */
+    margin: 1rem 0;
     text-align: center;
 }
 
 .social-share p {
-    margin-bottom: 0.3rem; /* Reduced margin */
+    margin-bottom: 0.3rem;
     font-weight: bold;
     color: #5c3a29;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
@@ -246,7 +263,7 @@ nav a:hover, nav a:focus {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Reduced gap */
+    gap: 1rem;
 }
 
 .social-share a {
@@ -255,11 +272,11 @@ nav a:hover, nav a:focus {
 }
 
 .social-share a:hover {
-    transform: scale(1.1) rotate(5deg); /* Added rotation on hover */
+    transform: scale(1.1) rotate(5deg);
 }
 
 .social-icon {
-    width: 30px; /* Slightly reduced size */
+    width: 30px;
     height: 30px;
     fill: #5c3a29;
     transition: fill 0.3s ease, transform 0.3s ease;
@@ -272,35 +289,35 @@ nav a:hover, nav a:focus {
 /* Newsletter styles */
 .newsletter {
     background-color: #f9f9f9;
-    padding: 1.5rem; /* Tightened padding */
+    padding: 1.5rem;
     text-align: center;
-    margin: 1.5rem 0; /* Reduced margin */
+    margin: 1.5rem 0;
 }
 
 .newsletter h3 {
     font-size: clamp(1.4rem, 3.5vw, 1.7rem);
-    margin-bottom: 0.8rem; /* Reduced margin */
+    margin-bottom: 0.8rem;
     color: #5c3a29;
 }
 
 .newsletter form {
     display: flex;
     justify-content: center;
-    gap: 0.8rem; /* Reduced gap */
+    gap: 0.8rem;
 }
 
 .newsletter input {
-    padding: 0.5rem; /* Tightened padding */
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
-    width: 220px; /* Slightly reduced width */
+    width: 220px;
 }
 
 .newsletter button {
     background-color: #e67e22;
     color: #fff;
-    padding: 0.5rem 1.2rem; /* Tightened padding */
+    padding: 0.5rem 1.2rem;
     border: none;
     border-radius: 5px;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
@@ -315,15 +332,15 @@ nav a:hover, nav a:focus {
 
 /* Contact form styles */
 .contact-form {
-    max-width: 550px; /* Slightly reduced max-width */
-    margin: 1rem auto; /* Reduced margin */
+    max-width: 550px;
+    margin: 1rem auto;
     text-align: left;
-    padding: 0 0.8rem; /* Tightened padding */
+    padding: 0 0.8rem;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 0.3rem; /* Reduced margin */
+    margin-bottom: 0.3rem;
     font-weight: bold;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
 }
@@ -331,23 +348,23 @@ nav a:hover, nav a:focus {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.5rem; /* Tightened padding */
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 0.8rem; /* Reduced margin */
+    margin-bottom: 0.8rem;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
     font-family: 'Georgia', serif;
 }
 
 .contact-form textarea {
     resize: vertical;
-    min-height: 90px; /* Slightly reduced min-height */
+    min-height: 90px;
 }
 
 .contact-form button {
     background-color: #e67e22;
     color: #fff;
-    padding: 0.7rem 1.2rem; /* Tightened padding */
+    padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 5px;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
@@ -367,7 +384,7 @@ footer {
     background-color: #5c3a29;
     color: #fff;
     text-align: center;
-    padding: 0.8rem 0; /* Tightened padding */
+    padding: 0.8rem 0;
 }
 
 footer a {
@@ -390,13 +407,13 @@ footer a:hover {
 
     /* Header */
     header {
-        padding: 0.5rem; /* Further tightened */
+        padding: 0.5rem;
     }
     .logo-img {
-        max-width: 120px; /* Further reduced */
+        max-width: 120px;
     }
     .logo-container {
-        padding: 0.2rem 0.5rem; /* Further tightened */
+        padding: 0.2rem 0.5rem;
     }
     header h1 {
         font-size: 1.5rem;
@@ -407,25 +424,25 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.2rem 0; /* Further tightened */
+        padding: 0.2rem 0;
     }
     nav a {
         width: 90%;
         text-align: center;
         margin: 0.2rem 0;
-        padding: 0.4rem 0.8rem; /* Further tightened */
+        padding: 0.4rem 0.8rem;
         font-size: 0.85rem;
     }
 
     /* Breadcrumbs */
     .breadcrumbs {
-        padding: 0.2rem 0.4rem; /* Further tightened */
+        padding: 0.2rem 0.4rem;
         font-size: 0.75rem;
     }
 
     /* Hero */
     .hero {
-        padding: 60px 0.5rem; /* Further tightened */
+        padding: 60px 0.5rem;
     }
     .hero h2 {
         font-size: 1.6rem;
@@ -435,13 +452,13 @@ footer a:hover {
         padding: 0 0.4rem;
     }
     .hero button {
-        padding: 0.5rem 1rem; /* Further tightened */
+        padding: 0.5rem 1rem;
         font-size: 0.85rem;
     }
 
     /* Content section */
     .content-section {
-        padding: 1.5rem 0.5rem; /* Further tightened */
+        padding: 1.5rem 0.5rem;
     }
     .content-section h2, .content-section h3 {
         font-size: 1.4rem;
@@ -451,17 +468,27 @@ footer a:hover {
         padding: 0 0.4rem;
     }
 
+    /* Policy list */
+    .policy-list {
+        padding-left: 1.2rem; /* Further tightened */
+        margin: 0.4rem 0; /* Further reduced */
+    }
+    .policy-list li {
+        margin-bottom: 0.2rem; /* Further reduced */
+        font-size: 0.85rem;
+    }
+
     /* Grid container */
     .grid-container {
         grid-template-columns: 1fr;
-        gap: 0.8rem; /* Further reduced */
-        padding: 0 0.4rem; /* Further tightened */
+        gap: 0.8rem;
+        padding: 0 0.4rem;
     }
     .grid-item {
-        padding: 1rem; /* Further tightened */
+        padding: 1rem;
     }
     .grid-item img {
-        margin-bottom: 0.6rem; /* Further reduced */
+        margin-bottom: 0.6rem;
     }
     .grid-item h3 {
         font-size: 1.1rem;
@@ -472,64 +499,64 @@ footer a:hover {
 
     /* Social share */
     .social-share {
-        margin: 0.8rem 0; /* Further reduced */
+        margin: 0.8rem 0;
     }
     .social-share p {
         font-size: 0.85rem;
     }
     .social-icons {
-        gap: 0.8rem; /* Further reduced */
+        gap: 0.8rem;
     }
     .social-icon {
-        width: 26px; /* Further reduced */
+        width: 26px;
         height: 26px;
     }
 
     /* Newsletter */
     .newsletter {
-        padding: 1.2rem; /* Further tightened */
-        margin: 1.2rem 0; /* Further reduced */
+        padding: 1.2rem;
+        margin: 1.2rem 0;
     }
     .newsletter h3 {
         font-size: 1.3rem;
     }
     .newsletter form {
         flex-direction: column;
-        gap: 0.4rem; /* Further reduced */
+        gap: 0.4rem;
     }
     .newsletter input {
         width: 100%;
-        padding: 0.4rem; /* Further tightened */
+        padding: 0.4rem;
         font-size: 0.85rem;
     }
     .newsletter button {
-        padding: 0.4rem 0.8rem; /* Further tightened */
+        padding: 0.4rem 0.8rem;
         font-size: 0.85rem;
     }
 
     /* Contact form */
     .contact-form {
-        padding: 0 0.4rem; /* Further tightened */
+        padding: 0 0.4rem;
         max-width: 100%;
-        margin: 0.8rem auto; /* Further reduced */
+        margin: 0.8rem auto;
     }
     .contact-form input,
     .contact-form textarea {
-        padding: 0.4rem; /* Further tightened */
+        padding: 0.4rem;
         font-size: 0.85rem;
-        margin-bottom: 0.6rem; /* Further reduced */
+        margin-bottom: 0.6rem;
     }
     .contact-form textarea {
-        min-height: 70px; /* Further reduced */
+        min-height: 70px;
     }
     .contact-form button {
-        padding: 0.6rem 0.8rem; /* Further tightened */
+        padding: 0.6rem 0.8rem;
         font-size: 0.85rem;
     }
 
     /* Footer */
     footer {
-        padding: 0.5rem 0; /* Further tightened */
+        padding: 0.5rem 0;
     }
     footer p {
         font-size: 0.85rem;
@@ -539,10 +566,10 @@ footer a:hover {
 @media (max-width: 480px) {
     /* Header */
     .logo-img {
-        max-width: 100px; /* Further reduced */
+        max-width: 100px;
     }
     .logo-container {
-        padding: 0.1rem 0.3rem; /* Further tightened */
+        padding: 0.1rem 0.3rem;
     }
     header h1 {
         font-size: 1.3rem;
@@ -551,7 +578,7 @@ footer a:hover {
     /* Navigation */
     nav a {
         font-size: 0.8rem;
-        padding: 0.3rem 0.6rem; /* Further tightened */
+        padding: 0.3rem 0.6rem;
     }
 
     /* Breadcrumbs */
@@ -561,7 +588,7 @@ footer a:hover {
 
     /* Hero */
     .hero {
-        padding: 50px 0.4rem; /* Further tightened */
+        padding: 50px 0.4rem;
     }
     .hero h2 {
         font-size: 1.4rem;
@@ -570,18 +597,28 @@ footer a:hover {
         font-size: 0.8rem;
     }
     .hero button {
-        padding: 0.4rem 0.8rem; /* Further tightened */
+        padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
     }
 
     /* Content section */
     .content-section {
-        padding: 1.2rem 0.4rem; /* Further tightened */
+        padding: 1.2rem 0.4rem;
     }
     .content-section h2, .content-section h3 {
         font-size: 1.2rem;
     }
     .content-section p {
+        font-size: 0.8rem;
+    }
+
+    /* Policy list */
+    .policy-list {
+        padding-left: 1rem; /* Further tightened */
+        margin: 0.3rem 0; /* Further reduced */
+    }
+    .policy-list li {
+        margin-bottom: 0.15rem; /* Further reduced */
         font-size: 0.8rem;
     }
 
@@ -598,10 +635,10 @@ footer a:hover {
         font-size: 0.8rem;
     }
     .social-icons {
-        gap: 0.6rem; /* Further reduced */
+        gap: 0.6rem;
     }
     .social-icon {
-        width: 24px; /* Further reduced */
+        width: 24px;
         height: 24px;
     }
 
@@ -617,10 +654,10 @@ footer a:hover {
     .contact-form input,
     .contact-form textarea {
         font-size: 0.8rem;
-        padding: 0.3rem; /* Further tightened */
+        padding: 0.3rem;
     }
     .contact-form button {
-        padding: 0.5rem 0.7rem; /* Further tightened */
+        padding: 0.5rem 0.7rem;
         font-size: 0.8rem;
     }
 
@@ -634,13 +671,13 @@ footer a:hover {
 @media (min-width: 769px) and (max-width: 1024px) {
     /* Header */
     header {
-        padding: 0.6rem; /* Tightened */
+        padding: 0.6rem;
     }
     .logo-img {
-        max-width: 130px; /* Slightly reduced */
+        max-width: 130px;
     }
     .logo-container {
-        padding: 0.3rem 0.7rem; /* Tightened */
+        padding: 0.3rem 0.7rem;
     }
     header h1 {
         font-size: 1.8rem;
@@ -649,12 +686,12 @@ footer a:hover {
     /* Navigation */
     nav a {
         font-size: 0.95rem;
-        padding: 0.5rem 1rem; /* Tightened */
+        padding: 0.5rem 1rem;
     }
 
     /* Hero */
     .hero {
-        padding: 100px 0.8rem; /* Tightened */
+        padding: 100px 0.8rem;
     }
     .hero h2 {
         font-size: 2.2rem;
@@ -663,13 +700,13 @@ footer a:hover {
         font-size: 1rem;
     }
     .hero button {
-        padding: 0.6rem 1.2rem; /* Tightened */
+        padding: 0.6rem 1.2rem;
         font-size: 0.95rem;
     }
 
     /* Content section */
     .content-section {
-        padding: 2rem 0.8rem; /* Tightened */
+        padding: 2rem 0.8rem;
     }
     .content-section h2, .content-section h3 {
         font-size: 1.6rem;
@@ -678,9 +715,19 @@ footer a:hover {
         font-size: 0.95rem;
     }
 
+    /* Policy list */
+    .policy-list {
+        padding-left: 1.3rem; /* Slightly tightened */
+        margin: 0.4rem 0; /* Reduced */
+    }
+    .policy-list li {
+        margin-bottom: 0.25rem; /* Reduced */
+        font-size: 0.95rem;
+    }
+
     /* Grid container */
     .grid-container {
-        gap: 1rem; /* Reduced */
+        gap: 1rem;
     }
     .grid-item h3 {
         font-size: 1.2rem;
@@ -691,13 +738,13 @@ footer a:hover {
 
     /* Social share */
     .social-icon {
-        width: 28px; /* Slightly reduced */
+        width: 28px;
         height: 28px;
     }
 
     /* Newsletter */
     .newsletter input {
-        width: 180px; /* Slightly reduced */
+        width: 180px;
     }
 }
 
@@ -705,13 +752,13 @@ footer a:hover {
 @media (min-width: 1025px) {
     /* Header */
     header {
-        padding: 1rem; /* Tightened */
+        padding: 1rem;
     }
     .logo-img {
-        max-width: 150px; /* Slightly reduced */
+        max-width: 150px;
     }
     .logo-container {
-        padding: 0.4rem 1rem; /* Tightened */
+        padding: 0.4rem 1rem;
     }
     header h1 {
         font-size: 2.6rem;
@@ -720,7 +767,7 @@ footer a:hover {
     /* Navigation */
     nav a {
         font-size: 1rem;
-        padding: 0.7rem 1.3rem; /* Tightened */
+        padding: 0.7rem 1.3rem;
     }
 
     /* Breadcrumbs */
@@ -730,7 +777,7 @@ footer a:hover {
 
     /* Hero */
     .hero {
-        padding: 250px 1.5rem; /* Tightened */
+        padding: 250px 1.5rem;
     }
     .hero h2 {
         font-size: 3.5rem;
@@ -739,13 +786,13 @@ footer a:hover {
         font-size: 1.4rem;
     }
     .hero button {
-        padding: 0.9rem 1.8rem; /* Tightened */
+        padding: 0.9rem 1.8rem;
         font-size: 1.1rem;
     }
 
     /* Content section */
     .content-section {
-        padding: 3rem 1.5rem; /* Tightened */
+        padding: 3rem 1.5rem;
     }
     .content-section h2 {
         font-size: 2.2rem;
@@ -754,13 +801,23 @@ footer a:hover {
         font-size: 1.1rem;
     }
 
+    /* Policy list */
+    .policy-list {
+        padding-left: 1.5rem;
+        margin: 0.5rem 0;
+    }
+    .policy-list li {
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+
     /* Grid container */
     .grid-container {
-        gap: 1.5rem; /* Reduced */
-        padding: 0 1rem; /* Tightened */
+        gap: 1.5rem;
+        padding: 0 1rem;
     }
     .grid-item {
-        padding: 1.5rem; /* Tightened */
+        padding: 1.5rem;
     }
     .grid-item h3 {
         font-size: 1.4rem;
@@ -771,51 +828,51 @@ footer a:hover {
 
     /* Social share */
     .social-share {
-        margin: 1.5rem 0; /* Reduced */
+        margin: 1.5rem 0;
     }
     .social-share p {
         font-size: 0.95rem;
     }
     .social-icon {
-        width: 34px; /* Slightly reduced */
+        width: 34px;
         height: 34px;
     }
 
     /* Newsletter */
     .newsletter {
-        padding: 2rem; /* Tightened */
-        margin: 2rem 0; /* Reduced */
+        padding: 2rem;
+        margin: 2rem 0;
     }
     .newsletter h3 {
         font-size: 1.7rem;
     }
     .newsletter input {
-        width: 280px; /* Slightly reduced */
-        padding: 0.6rem; /* Tightened */
+        width: 280px;
+        padding: 0.6rem;
         font-size: 0.95rem;
     }
     .newsletter button {
-        padding: 0.6rem 1.8rem; /* Tightened */
+        padding: 0.6rem 1.8rem;
         font-size: 0.95rem;
     }
 
     /* Contact form */
     .contact-form {
-        padding: 0 1rem; /* Tightened */
+        padding: 0 1rem;
     }
     .contact-form input,
     .contact-form textarea {
-        padding: 0.6rem; /* Tightened */
+        padding: 0.6rem;
         font-size: 0.95rem;
     }
     .contact-form button {
-        padding: 0.9rem 1.8rem; /* Tightened */
+        padding: 0.9rem 1.8rem;
         font-size: 0.95rem;
     }
 
     /* Footer */
     footer {
-        padding: 1rem 0; /* Tightened */
+        padding: 1rem 0;
     }
     footer p {
         font-size: 0.95rem;
