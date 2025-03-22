@@ -24,13 +24,17 @@ header {
     display: inline-block;
 }
 
+/* Logo container with fade effect */
+.logo-container {
+    /* Linear gradient: transparent -> white -> transparent */
+    background: linear-gradient(to right, transparent, #ffffff, transparent);
+    padding: 0.5rem 1rem; /* Padding to control the fade area */
+    display: inline-block;
+}
+
 .logo-img {
     max-width: 150px;
     height: auto;
-}
-
-/* Ensure logo is centered and doesn't overflow */
-.logo-img {
     display: block;
     margin: 0 auto;
 }
@@ -371,6 +375,9 @@ footer a:hover {
     .logo-img {
         max-width: 130px;
     }
+    .logo-container {
+        padding: 0.3rem 0.75rem; /* Slightly reduced padding for mobile */
+    }
     header h1 {
         font-size: 1.6rem;
     }
@@ -511,6 +518,9 @@ footer a:hover {
     .logo-img {
         max-width: 110px;
     }
+    .logo-container {
+        padding: 0.2rem 0.5rem; /* Further reduced padding for smaller screens */
+    }
     header h1 {
         font-size: 1.4rem;
     }
@@ -606,6 +616,9 @@ footer a:hover {
     .logo-img {
         max-width: 140px;
     }
+    .logo-container {
+        padding: 0.4rem 0.9rem;
+    }
     header h1 {
         font-size: 2rem;
     }
@@ -673,6 +686,9 @@ footer a:hover {
     }
     .logo-img {
         max-width: 160px;
+    }
+    .logo-container {
+        padding: 0.5rem 1.5rem; /* Slightly increased padding for larger screens */
     }
     header h1 {
         font-size: 2.8rem;
