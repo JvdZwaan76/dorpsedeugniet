@@ -45,7 +45,7 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 0.75rem 1.5rem; /* Increased padding for better touch targets */
+    padding: 0.75rem 1.5rem;
     margin: 0.2rem;
     border-radius: 5px;
     display: inline-block;
@@ -353,6 +353,11 @@ footer a:hover {
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
+    /* Hero background image for mobile */
+    .hero {
+        background-image: url('/images/dutch-canal-landscape-768w.jpg');
+    }
+
     /* Header */
     header {
         padding: 0.75rem;
