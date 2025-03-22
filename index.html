@@ -9,7 +9,6 @@
     <meta name="author" content="Dorpsedeugniet">
     <link rel="canonical" href="https://www.dorpsedeugniet.com/">
     <style>
-        /* ... (rest of your CSS remains the same) ... */
         body {
             font-family: 'Georgia', serif;
             margin: 0;
@@ -225,3 +224,29 @@
 
     <section id="process" class="content-section">
         <h3>The Dorpsedeugniet Brewing Process</h3>
+        <p>From selecting the finest ingredients to the careful aging of our beers, every step of our process is handled with meticulous care and dedication.</p>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h3>Contact Us</h3>
+        <p>Questions? Comments? Reach out to us!</p>
+        <form class="contact-form" action="mailto:jaspervdz@me.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dorpsedeugniet. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
