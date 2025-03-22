@@ -70,7 +70,7 @@
         }
 
         .hero {
-            background-image: url('dutch-canal-landscape.jpg'); /* Updated background image */
+            background-image: url('dutch-canal-landscape.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -279,6 +279,23 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Desktop-specific adjustments for larger screens */
+        @media (min-width: 1200px) {
+            .hero {
+                padding: 300px 2rem;
+            }
+            .hero h2 {
+                font-size: 4rem;
+            }
+            .hero p {
+                font-size: 1.5rem;
+            }
+            .hero button {
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -306,12 +323,12 @@
 
         <div class="grid-container">
             <div class="grid-item">
-                <img src="ingredients.jpg" alt="Finest ingredients for Dorpsedeugniet beer brewing" loading="lazy">
+                <img src="beer-with-hops.jpg" alt="Glass of beer with hops for Dorpsedeugniet ingredients" loading="lazy">
                 <h4>Finest Ingredients</h4>
                 <p>We source only the best hops, malts, and yeast to create beers of exceptional quality.</p>
             </div>
             <div class="grid-item">
-                <img src="brewing.jpg" alt="Expert brewing process at Dorpsedeugniet" loading="lazy">
+                <img src="brewing-scene.jpg" alt="Brewing scene with beer and wheat at Dorpsedeugniet" loading="lazy">
                 <h4>Expert Brewing</h4>
                 <p>Our brewers use time-honored techniques and modern innovation to craft unique and flavorful beers.</p>
             </div>
