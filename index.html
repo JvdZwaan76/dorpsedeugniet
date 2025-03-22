@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorpsedeugniet - Artesian Dutch Beer from Reeuwijk | Small Batch Brewing</title>
-    <meta name="description" content="Experience the finest artesian Dutch beer from Reeuwijk. Dorpsedeugniet offers small-batch, expertly brewed beers using only the best ingredients. Discover our unique flavors today.">
-    <meta name="keywords" content="artesian beer, Dutch beer, Reeuwijk, small batch brewing, craft beer, artisan beer, Netherlands beer, local beer, premium beer, Dorpsedeugniet">
+    <meta name="description" content="Discover Dorpsedeugniet, Reeuwijk's finest artesian Dutch beer. Expertly brewed in small batches with premium ingredients for unique, rich flavors.">
+    <meta name="keywords" content="artesian beer, Dutch beer, Reeuwijk, small batch brewing, craft beer, artisan beer, Netherlands beer, premium beer, Dorpsedeugniet">
     <meta name="author" content="Dorpsedeugniet">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.dorpsedeugniet.com/">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS for better caching -->
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Brewery",
+        "name": "Dorpsedeugniet",
+        "description": "Artesian Dutch beer brewed in small batches in Reeuwijk, Netherlands.",
+        "url": "https://www.dorpsedeugniet.com/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Reeuwijk",
+            "addressCountry": "NL"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "jaspervdz@me.com"
+        }
+    }
+    </script>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -20,33 +41,32 @@
 
         header {
             background-color: #d2b48c;
-            padding: 20px;
+            padding: 1rem;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: clamp(1.8rem, 5vw, 2.8rem); /* Responsive font size */
             color: #5c3a29;
         }
 
         nav {
             background-color: #5c3a29;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            padding: 0.5rem 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 0.5rem 1rem;
+            margin: 0.2rem;
             border-radius: 5px;
+            display: inline-block;
             transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
+        nav a:hover, nav a:focus {
             background-color: #4a2d1f;
         }
 
@@ -56,9 +76,8 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 250px 20px;
+            padding: clamp(100px, 20vw, 250px) 1rem;
             position: relative;
-            background-attachment: fixed;
         }
 
         .hero::before {
@@ -77,35 +96,35 @@
         }
 
         .hero h2 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .hero p {
-            font-size: 1.3em;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 1.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
         }
 
         .hero button {
             background-color: #e67e22;
             color: white;
-            padding: 15px 30px;
+            padding: 0.8rem 1.5rem;
             border: none;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        .hero button:hover {
+        .hero button:hover, .hero button:focus {
             background-color: #d35400;
         }
 
         .content-section {
-            padding: 80px 20px;
+            padding: 3rem 1rem;
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -113,26 +132,27 @@
         }
 
         .content-section h3 {
-            font-size: 2.4em;
-            margin-bottom: 20px;
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            margin-bottom: 1rem;
             color: #5c3a29;
         }
 
         .content-section p {
-            font-size: 1.2em;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 1.5rem;
         }
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 0 1rem;
         }
 
         .grid-item {
             background-color: #f9f9f9;
-            padding: 30px;
+            padding: 1.5rem;
             border-radius: 8px;
             text-align: left;
         }
@@ -140,43 +160,81 @@
         .grid-item img {
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
             border-radius: 5px;
+            loading: "lazy"; /* Lazy loading for performance */
         }
 
         footer {
             background-color: #5c3a29;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 1rem 0;
         }
 
         .contact-form {
             max-width: 600px;
-            margin: 30px auto;
+            margin: 1.5rem auto;
             text-align: left;
+            padding: 0 1rem;
         }
 
-        .contact-form label, .contact-form input, .contact-form textarea, .contact-form button{
+        .contact-form label {
             display: block;
-            width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
 
         .contact-form input, .contact-form textarea {
-            padding: 10px;
+            width: 100%;
+            padding: 0.6rem;
             border: 1px solid #ccc;
             border-radius: 5px;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
         }
 
-        .contact-form button{
+        .contact-form button {
             background-color: #e67e22;
             color: white;
-            padding: 15px 30px;
+            padding: 0.8rem 1.5rem;
             border: none;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 1rem;
             cursor: pointer;
+            width: 100%;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                width: 80%;
+                text-align: center;
+                margin: 0.3rem 0;
+            }
+            .hero {
+                padding: 100px 1rem;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -186,17 +244,17 @@
         <h1>Dorpsedeugniet - Reeuwijk Artesian Beer</h1>
     </header>
 
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#beers">Our Beers</a>
         <a href="#process">Brewing Process</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-label="Hero section">
         <h2>Artesian Beer from Reeuwijk</h2>
         <p>Experience the rich flavors of our hand-crafted beers, brewed with passion and tradition in the heart of the Netherlands.</p>
-        <a href="#beers"><button>Discover Our Beers</button></a>
+        <a href="#beers"><button aria-label="Discover our beers">Discover Our Beers</button></a>
     </section>
 
     <section id="beers" class="content-section">
@@ -205,17 +263,17 @@
 
         <div class="grid-container">
             <div class="grid-item">
-                <img src="ingredients.jpg" alt="Finest Ingredients for Dorpsedeugniet Beer">
+                <img src="ingredients.jpg" alt="Finest ingredients for Dorpsedeugniet beer brewing" loading="lazy">
                 <h4>Finest Ingredients</h4>
                 <p>We source only the best hops, malts, and yeast to create beers of exceptional quality.</p>
             </div>
             <div class="grid-item">
-                <img src="brewing.jpg" alt="Expert Brewing at Dorpsedeugniet">
+                <img src="brewing.jpg" alt="Expert brewing process at Dorpsedeugniet" loading="lazy">
                 <h4>Expert Brewing</h4>
                 <p>Our brewers use time-honored techniques and modern innovation to craft unique and flavorful beers.</p>
             </div>
             <div class="grid-item">
-                <img src="aging.jpg" alt="Careful Aging of Dorpsedeugniet Beer">
+                <img src="aging.jpg" alt="Careful aging of Dorpsedeugniet beer" loading="lazy">
                 <h4>Careful Aging</h4>
                 <p>We allow our beers to mature, developing their full potential and complex flavor profiles.</p>
             </div>
@@ -230,22 +288,22 @@
     <section id="contact" class="content-section">
         <h3>Contact Us</h3>
         <p>Questions? Comments? Reach out to us!</p>
-        <form class="contact-form" action="mailto:jaspervdz@me.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="mailto:jaspervdz@me.com" method="post" enctype="text/plain" aria-label="Contact form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required aria-required="true">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required aria-required="true">
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
 
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 Dorpsedeugniet. All rights reserved.</p>
+        <p>© 2025 Dorpsedeugniet. All rights reserved.</p>
     </footer>
 
 </body>
