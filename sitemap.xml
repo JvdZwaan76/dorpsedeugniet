@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- English Homepage -->
     <url>
         <loc>https://www.dorpsedeugniet.com/</loc>
-        <lastmod>2025-03-21</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-03-22</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://www.dorpsedeugniet.com/nl/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.dorpsedeugniet.com/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dorpsedeugniet.com/" />
     </url>
+
+    <!-- Dutch Homepage -->
     <url>
-        <loc>https://www.dorpsedeugniet.com/#beers</loc>
-        <lastmod>2025-03-21</lastmod>
+        <loc>https://www.dorpsedeugniet.com/nl/</loc>
+        <lastmod>2025-03-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.dorpsedeugniet.com/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://www.dorpsedeugniet.com/nl/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dorpsedeugniet.com/" />
+    </url>
+
+    <!-- Privacy Policy Page -->
+    <url>
+        <loc>https://www.dorpsedeugniet.com/privacy-policy.html</loc>
+        <lastmod>2025-03-22</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Sitemap Page (self-reference) -->
+    <url>
+        <loc>https://www.dorpsedeugniet.com/sitemap.xml</loc>
+        <lastmod>2025-03-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>
